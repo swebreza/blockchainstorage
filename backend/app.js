@@ -30,7 +30,9 @@ app.use('/api', authRoutes)
 app.use('/api', userRoutes)
 app.use('/api', ipfsRoutes)
 app.get('/', (req, res) => {
-  return res.send('Hello There!!!!')
+  return res.send(
+    'this App is an api for backend that stores data on the blockchain IPFS and MongoDB, please kindly use postman or clone the backend repo to test the app.'
+  )
 })
 
 app.get('/login', (req, res) => {
