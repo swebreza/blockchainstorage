@@ -31,7 +31,7 @@ app.use('/api', userRoutes)
 app.use('/api', ipfsRoutes)
 app.get('/', (req, res) => {
   return res.send(
-    'this App is an api for backend that stores data on the blockchain IPFS and MongoDB, please kindly use postman or clone the backend repo to test the app.'
+    'this App is an api for backend that stores data on the blockchain IPFS and MongoDB, please kindly use postman or clone the backend repo to test the app. repo is :- https://github.com/swebreza/blockchainstorage.git . and then ``cd backend`` and ``npm start`` to start the server.'
   )
 })
 
