@@ -1,6 +1,6 @@
 const fs = require('fs')
 const ipfsClient = require('./ipfsController')
-const fileLocation = './README.md'
+const fileLocation = './AboutHackathon.txt'
 
 exports.saveFile = async (req, res) => {
   let ipfs = await ipfsClient.ipfsCobtroller()
