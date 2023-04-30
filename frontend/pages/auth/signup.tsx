@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Head from "next/head";
-import styles from "../styles/Signup.module.css";
+import styles from "../../styles/Signup.module.css";
 
 export default function Signup() {
   const [email, setEmail] = useState("");

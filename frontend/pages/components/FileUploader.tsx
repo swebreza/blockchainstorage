@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useDropzone, FileRejection } from "react-dropzone";
 
-import styles from "../styles/FileUploader.module.css";
+import styles from "../../styles/FileUploader.module.css";
 
 const FileUploader = () => {
   const [files, setFiles] = useState<File[]>([]);

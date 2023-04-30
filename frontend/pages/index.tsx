@@ -1,16 +1,22 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import Navbar from '../components/Navbar'
+import Navbar from './components/Navbar'
 import styles from '@/styles/Home.module.css'
 import Link from 'next/link'
-import FileUploader from "../components/FileUploader"; 
+// import FileUploader from "./FileUpload"; 
+import { Roboto } from 'next/font/google'
 
+const roboto = Roboto({
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+})
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <>
+    <div className={roboto.className}>
       <Navbar />
       <Head>
         <title>Decentralized Cloud Storage System using Blockchain</title>
@@ -36,27 +42,27 @@ export default function Home() {
         </div>
 
         <div className={styles.grid}>
-          <Link href='./signup.tsx'>
+          <Link href='./auth/signup'>
             <h2 className={inter.className}>
               Signup <span>-&gt;</span>
             </h2>
           </Link>
             <a className={inter.className}>
             </a>
-          <Link href='/'>
+          <Link href='./auth/login'>
             <h2 className={inter.className}>
               Login <span>-&gt;</span>
             </h2>
           </Link>
             <a className={inter.className}>
             </a>
-          <Link href='./FileUpload.tsx'>
+          <Link href='./FileUpload'>
             <h2 className={inter.className}>
               File Upload <span>-&gt;</span>
             </h2>
           </Link>
           <a className={inter.className}></a>
-          <Link href='/'>
+          <Link href='./components/allFiles'>
             <h2 className={inter.className}>
               Files Access <span>-&gt;</span>
             </h2>
@@ -64,6 +70,6 @@ export default function Home() {
           <a className={inter.className}></a>
         </div>
       </main>
-    </>
+    </div>
   )
 }
