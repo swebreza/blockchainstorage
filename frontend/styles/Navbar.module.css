@@ -12,7 +12,7 @@
   width: 40px;
   margin-right: 10px;
   transition: all 0.2s ease-in-out;
-  background-image: url('./logo.svg')
+  
 }
 
 .navbar-logo:hover {
