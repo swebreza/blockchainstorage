@@ -24,8 +24,8 @@ const About = () => {
               <div></div>
             </div>
           </div>
-          <div className='grid grid-cols-1 gap-4 gap-y-6 border-b border-gray-300 py-16 md:grid-cols-2 lg:grid-cols-4'>
-            <div className='space-y-2'>
+          <div className='p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4  gap-5 '>
+            <div className='space-y-2 rounded overflow-hidden shadow-lg dark:shadow-gray-800 pb-5'>
               <img
                 src='https://media.licdn.com/dms/image/D5603AQGaA6ZXAvUPJw/profile-displayphoto-shrink_800_800/0/1682706728196?e=1688601600&v=beta&t=NibKsxouczbUpXb695uz8h1q2mzHj5Vf06KceQqUlYc'
                 className='w-full'
@@ -64,7 +64,7 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <div className='space-y-2'>
+            <div className='space-y-2 rounded overflow-hidden shadow-lg dark:shadow-gray-800 pb-5'>
               <img
                 src='https://images.generated.photos/vBRCiI_3UM4l40sU8s7fCwbJwzDwRTGpebzPkfHFsY4/rs:fit:512:512/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/ODgyMTAyLmpwZw.jpg'
                 alt='Victória Silva'
@@ -129,7 +129,7 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <div className='space-y-2'>
+            <div className='space-y-2 rounded overflow-hidden shadow-lg dark:shadow-gray-800 pb-5'>
               <img
                 src='https://images.unsplash.com/photo-1549351512-c5e12b11e283?q=80&amp;fm=jpg&amp;crop=faces&amp;fit=crop&amp;h=600&amp;w=600'
                 alt='Gabrielle Fernandez'
@@ -192,7 +192,7 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <div className='space-y-2'>
+            <div className='space-y-2 rounded overflow-hidden shadow-lg dark:shadow-gray-800 pb-5'>
               <img
                 src='https://images.unsplash.com/photo-1485960994840-902a67e187c8?q=80&amp;fm=jpg&amp;crop=faces&amp;fit=crop&amp;h=600&amp;w=600'
                 alt='Sadie Lewis'

@@ -99,7 +99,7 @@ export default function Home() {
           </section>
           <section className='overflow-hidden bg-gray-100 py-12 pb-24 dark:bg-gray-900'>
             <div className='container mx-auto px-4'>
-              <div className='grid grid-cols-2 justify-items-center gap-8 '>
+              <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 justify-items-center gap-8 '>
                 <div className='flex items-center justify-center '>
                   <img
                     src='https://upload.wikimedia.org/wikipedia/commons/1/18/Ipfs-logo-1024-ice-text.png'
@@ -361,7 +361,6 @@ export default function Home() {
               </div>
             </div>
           </section>
-
           <center className='justify-items-center flex-1 center pt-14 text-slate-400'>
             Made With ❤️ by MD Suweb Reza And Team
           </center>

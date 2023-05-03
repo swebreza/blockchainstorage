@@ -3,11 +3,11 @@
   justify-content: space-between;
   align-items: center;
   height: 60px;
-  background-color: #333;
+  background-color: #000;
   color: #fff;
 }
 
-.navbar-logo {
+/* .navbar-logo {
   height: 40px;
   width: 40px;
   margin-right: 10px;
@@ -17,16 +17,16 @@
 
 .navbar-logo:hover {
   box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
-}
-
+} */
+/* 
 .navbar-logo img {
   display: none;
-}
+} */
 
 .navbar-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 
 .navbar-links li {
