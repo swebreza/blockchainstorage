@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const fileSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: true
+    // required: true
   },
   url: {
     type: String,
@@ -19,13 +19,10 @@ const fileSchema = new mongoose.Schema({
   },
   uploadDate: {
     type: Date,
-    required: true,
+    // required: true,
     default: Date.now
   },
-  user: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User'
-  }
+
 });
 
 const File = mongoose.model('File', fileSchema);

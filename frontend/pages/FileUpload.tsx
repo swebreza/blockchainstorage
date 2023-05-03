@@ -23,7 +23,7 @@ const client = create({
 
 const UploadPage = () => {
   const [fileUrl, updateFileUrl] = useState(``)
-  async function onChange(e) {
+  async function onChange(e: any) {
     const file = e.target.files[0]
     try {
       const added = await client.add(file)

@@ -38,8 +38,9 @@ var userSchema = new mongoose.Schema(
     },
     files: [
       {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'File'
+        url: {
+          type: String,
+        }
       }
     ],
   },
