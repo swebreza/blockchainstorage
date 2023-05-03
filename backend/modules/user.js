@@ -36,15 +36,12 @@ var userSchema = new mongoose.Schema(
       type: Number,
       default: 0,
     },
-    fileUploads: {
-      type: Array,
-      default: [
-        {
-          type: mongoose.Schema.Types.ObjectId,
-          ref: 'File',
-        },
-      ],
-    },
+    files: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'File'
+      }
+    ],
   },
   { timestamps: true }
 )

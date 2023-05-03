@@ -57,7 +57,7 @@ export default function SignIn() {
   }
 
   return (
-    <>
+    <div style={{backgroundColor:'black', height:'100vh'}}>
       <Navbar />
       <ThemeProvider theme={theme}>
         <Container component='main' maxWidth='xs' style={{backgroundColor:'white',color:'black',borderRadius:'1rem'}}>
@@ -123,6 +123,6 @@ export default function SignIn() {
           {error && <div className='text-red-500'>{error}</div>}
         </Container>
       </ThemeProvider>
-    </>
+    </div>
   )
 }

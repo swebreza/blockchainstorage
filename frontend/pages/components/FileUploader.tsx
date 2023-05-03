@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useDropzone, FileRejection } from "react-dropzone";
+import Image from "next/image";
 
 import styles from "../../styles/FileUploader.module.css";
 
@@ -30,7 +31,7 @@ const FileUploader = () => {
         {files.map((file) => (
           <div key={file.name}>
             <div>
-              <img src={file.preview} alt={file.name} />
+              {/* <Image src={file} alt={file.name} /> */}
             </div>
             <div>{file.name}</div>
           </div>

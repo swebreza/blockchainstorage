@@ -55,7 +55,7 @@ export default function SignUp() {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
   return (
-    <div>
+    <div style={{backgroundColor:'black', height:'100vh'}}>
       <Navbar />
       <ThemeProvider theme={theme}>
         <Container component='main' maxWidth='xs' style={{backgroundColor:'white',color:'black',borderRadius:'1rem'}}>
