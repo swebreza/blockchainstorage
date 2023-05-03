@@ -38,9 +38,16 @@ var userSchema = new mongoose.Schema(
     },
     files: [
       {
+        name: {
+          type: String,
+        },
         url: {
           type: String,
-        }
+        },
+        uploadDate: {
+          type: Date,
+          default: Date.now
+        },
       }
     ],
   },

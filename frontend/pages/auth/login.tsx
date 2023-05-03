@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react'
 import Avatar from '@mui/material/Avatar'
 import Button from '@mui/material/Button'
 import CssBaseline from '@mui/material/CssBaseline'
@@ -23,7 +23,7 @@ export default function SignIn() {
   })
   const [error, setError] = useState('')
 
-  const handleSubmit = async (e: { preventDefault: () => void; }) => {
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault()
     console.log(formData)
     try {
@@ -46,21 +46,29 @@ export default function SignIn() {
       console.log(sessionStorage.getItem('email'))
       alert('User Logged In Successfully!!!')
 
-      router.push('../components/allFiles')
+      router.push('../components/dashboard')
     } catch (error) {
       setError('Invalid email or password')
     }
   }
 
-  const handleChange = (e: { target: { name: any; value: any; }; }) => {
+  const handleChange = (e: { target: { name: any; value: any } }) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
   return (
-    <div style={{backgroundColor:'black', height:'100vh'}}>
+    <div style={{ backgroundColor: 'black', height: '100vh' }}>
       <Navbar />
       <ThemeProvider theme={theme}>
-        <Container component='main' maxWidth='xs' style={{backgroundColor:'white',color:'black',borderRadius:'1rem'}}>
+        <Container
+          component='main'
+          maxWidth='xs'
+          style={{
+            backgroundColor: 'white',
+            color: 'black',
+            borderRadius: '1rem',
+          }}
+        >
           <CssBaseline />
           <Box
             sx={{
@@ -113,7 +121,7 @@ export default function SignIn() {
               </Button>
               <Grid container>
                 <Grid item>
-                  <Link href='./signup'  className='underline'>
+                  <Link href='./signup' className='underline'>
                     {"Don't have an account? Sign Up"}
                   </Link>
                 </Grid>

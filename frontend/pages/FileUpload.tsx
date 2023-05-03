@@ -1,9 +1,10 @@
 import { Button } from '@material-ui/core'
 import FileUploader from './components/FileUploader'
 import Navbar from './components/Navbar'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { create } from 'ipfs-http-client'
 import { Buffer } from 'buffer'
+import axios from 'axios'
 
 /* configure Infura auth settings */
 const projectId = '2N3nLfT8GAq1IotvkUgjc06KQ5M'
@@ -22,6 +23,7 @@ const client = create({
 })
 
 const UploadPage = () => {
+  const [formData, setFormData] = useState(``)
   const [fileUrl, updateFileUrl] = useState(``)
   async function onChange(e: any) {
     const file = e.target.files[0]
@@ -34,12 +36,44 @@ const UploadPage = () => {
       console.log('Error uploading file: ', error)
     }
   }
+  useEffect(() => {
+    if (fileUrl) {
+      try {
+        console.log(formData, fileUrl)
+        const response = axios.post(
+          `http://localhost:8000/api/user/addFile/${sessionStorage.getItem(
+            'id'
+          )}`,
+          JSON.stringify({
+            name: formData,
+            url: fileUrl,
+          }),
+          {
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          }
+        )
+
+        // console.log(response)
+        alert('Uploaded was Successful!!!')
+      } catch (error) {
+        console.log(error)
+        alert('Uploaded was Unsuccessful!!!')
+      }
+    }
+  }, [fileUrl, formData])
+
+  const handleChange = (e: { target: { name: any; value: any } }) => {
+    setFormData(e.target.value)
+  }
+
   return (
     <div>
       <Navbar />
       <div style={{ padding: '3rem' }}>
         <h1>Upload File</h1>
-        {/* <input type="text" name="name" id="" /> */}
+        <input type='text' name='name' onChange={handleChange} />
         <input type='file' onChange={onChange} />
         {fileUrl && (
           <div>
@@ -53,26 +87,5 @@ const UploadPage = () => {
     </div>
   )
 }
-
-//   return (
-//     <div>
-//         <Navbar/>
-//       <div style={{padding:'3rem'}}>
-//       <h1>Upload Files</h1>
-//       <Button
-//   variant="contained"
-//   component="label"
-// >
-//    Upload File
-//   <input
-//     type="file"
-
-//   />
-// </Button>
-//       <FileUploader />
-//       </div>
-//     </div>
-//   );
-// };
 
 export default UploadPage
